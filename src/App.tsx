@@ -1,11 +1,21 @@
 
-
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 function App() {
 
@@ -13,23 +23,40 @@ function App() {
   return (
     <>
       <p className="bg-red-950 text-lg">hello</p>
-      <Accordion type="single" collapsible>
-				<AccordionItem value="item-1">
-					<AccordionTrigger>Is it accessible?</AccordionTrigger>
-					<AccordionContent>
-						Yes. It adheres to the WAI-ARIA design pattern.
-					</AccordionContent>
-				</AccordionItem>
-				<AccordionItem value="item-2">
-					<AccordionTrigger>Are you hungry?</AccordionTrigger>
-					<AccordionContent>
-						Yes. I am hungry because I want to be rich.
-					</AccordionContent>
-				</AccordionItem>
-			</Accordion>
+			<DropdownMenu>
+				<DropdownMenuTrigger>Open</DropdownMenuTrigger>
+				<DropdownMenuContent>
+					<DropdownMenuLabel>profiles</DropdownMenuLabel>
+					<DropdownMenuSeparator />
+					<DropdownMenuItem>close</DropdownMenuItem>
+					<DropdownMenuItem>Billing</DropdownMenuItem>
+					<DropdownMenuItem>Team</DropdownMenuItem>
+					<DropdownMenuItem>Subscription</DropdownMenuItem>
+				</DropdownMenuContent>
+			</DropdownMenu>
+			<Carousel className="w-full max-w-xs ml-48">
+      	<CarouselContent>
+        {Array.from({ length: 5 }).map((_, index) => (
+          <CarouselItem key={index}>
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
+                  <span className="text-4xl font-semibold">{index + 1}</span>
+                </CardContent>
+              </Card>
+            </div>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious />
+      <CarouselNext />
+    </Carousel>
+
 
     </>
   )
 }
 
 export default App
+
+
