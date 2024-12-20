@@ -16,23 +16,23 @@ import {
 function CarouselComponent() {
    return(
 		<>
-			<Carousel className="w-1/2 m-auto">
-				<CarouselContent>
+			<Carousel className="">
+				<CarouselContent className='bg-red-950'>
 					<CarouselItem>
-						<img src={thumbnail1} alt="" />
+						<img src={thumbnail1} alt="" className='w-full'/>
 					</CarouselItem>
 					<CarouselItem>
-						<img src={thumbnail2} alt="" />
+						<img src={thumbnail2} alt="" className='w-full'/>
 					</CarouselItem>
 					<CarouselItem>
-						<img src={thumbnail3} alt="" />
+						<img src={thumbnail3} alt="" className='w-full'/>
 					</CarouselItem>
 					<CarouselItem>
-						<img src={thumbnail4} alt="" />
+						<img src={thumbnail4} alt="" className='w-full'/>
 					</CarouselItem>
 				</CarouselContent>
 				<CarouselPrevious />
-				<CarouselNext />
+				<CarouselNext className=''/>
 			</Carousel>
 
 		</>
