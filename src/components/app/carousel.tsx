@@ -1,8 +1,8 @@
 
-import thumbnail1 from './assets/image-product-1-thumbnail.jpg'
-import thumbnail2 from './assets/image-product-2-thumbnail.jpg'
-import thumbnail3 from './assets/image-product-3-thumbnail.jpg'
-import thumbnail4 from './assets/image-product-4-thumbnail.jpg'
+import image1 from './assets/image-product-1.jpg'
+import image2 from './assets/image-product-2.jpg'
+import image3 from './assets/image-product-3.jpg'
+import image4 from './assets/image-product-4.jpg'
 
 
 import {
@@ -13,22 +13,22 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-function CarouselComponent() {
+function MobileCarousel() {
    return(
 		<>
 			<Carousel className="">
 				<CarouselContent className='bg-red-950'>
 					<CarouselItem>
-						<img src={thumbnail1} alt="" className='w-full'/>
+						<img src={image1} alt="" className='w-full'/>
 					</CarouselItem>
 					<CarouselItem>
-						<img src={thumbnail2} alt="" className='w-full'/>
+						<img src={image2} alt="" className='w-full'/>
 					</CarouselItem>
 					<CarouselItem>
-						<img src={thumbnail3} alt="" className='w-full'/>
+						<img src={image3} alt="" className='w-full'/>
 					</CarouselItem>
 					<CarouselItem>
-						<img src={thumbnail4} alt="" className='w-full'/>
+						<img src={image4} alt="" className='w-full'/>
 					</CarouselItem>
 				</CarouselContent>
 				<CarouselPrevious />
@@ -39,4 +39,4 @@ function CarouselComponent() {
 	 ) 
 }
 
-export default CarouselComponent
+export default MobileCarousel
