@@ -2,7 +2,7 @@ import useCartStore from "./state"
 import thumbnail1 from './assets/image-product-1-thumbnail.jpg'
 import deleteIcon from './assets/icon-delete.svg'
 function Cartcontent() {
-	const itemsInCart=useCartStore((state)=>state.count)
+	const itemsInCart=useCartStore((state)=>state.cart)
 	return(
 		<>
 			<p>Cart</p>

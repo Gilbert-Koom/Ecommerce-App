@@ -4,13 +4,17 @@ import CartImage from './cart'
 import useCartStore from './state'
 
 function Controller() { 
-	const itemsInCart=useCartStore((state)=>state.count)
+	const count=useCartStore((state)=>state.count)
 	const increment=useCartStore((state)=>state.increment)
 	const decrement=useCartStore((state)=>state.decrement)
+	const addToCart=useCartStore((state)=>state.addToCart)
 
+	const cart=useCartStore((state)=>state.cart)
+
+	console.log(`Items in cart are: ${cart}`)
 
 	function decreasor() {
-		if (itemsInCart>0) {
+		if (count >0) {
 			decrement()
 			
 		}
@@ -25,12 +29,12 @@ function Controller() {
 				<button>
 					<img src={minus} alt="" onClick={decreasor}/>
 				</button>
-				<p>{itemsInCart}</p>
+				<p>{count}</p>
 				<button onClick={increment}>
 					<img src={plus} alt="" />
 				</button>
 			</div>
-			<button className='flex'>
+			<button className='flex' onClick={addToCart}>
 				<CartImage />
 				<p>Add to Cart</p>
 			</button>
