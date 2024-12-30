@@ -22,7 +22,7 @@ function DesktopCarousel() {
 
    return(
 		<>
-			<div className=''>
+			<div className='hidden md:flex flex-col items-center'>
 				<div>
 					{
 						image==='first' ? <img src={image1} alt="" /> : <p></p>

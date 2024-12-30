@@ -5,7 +5,7 @@ import Cart from "./cart";
 function DesktopHeader() {
 	return(
 		<>
-			<div className="flex justify-between items-center">
+			<div className="hidden justify-between items-center md:flex">
 				<p>Sneakers</p>
 				<p>Collections</p>
 				<p>Men</p>

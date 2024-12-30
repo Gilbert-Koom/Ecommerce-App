@@ -16,7 +16,7 @@ import {
 function MobileCarousel() {
    return(
 		<>
-			<Carousel className="">
+			<Carousel className="md:hidden">
 				<CarouselContent className='bg-red-950'>
 					<CarouselItem>
 						<img src={image1} alt="" className='w-full'/>
