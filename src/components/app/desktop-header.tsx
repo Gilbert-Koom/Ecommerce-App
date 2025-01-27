@@ -11,7 +11,7 @@ function DesktopHeader() {
 				<p>Men</p>
 				<p>Women</p>
 				<Cart />
-				<Avatar />
+				<Avatar /> 
 			</div>
 			
 		</>
