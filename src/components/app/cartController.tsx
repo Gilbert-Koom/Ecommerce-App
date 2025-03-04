@@ -25,7 +25,7 @@ function Controller() {
 	}
 	return(
 		<>
-			<div className='flex'>
+			<div className='flex justify-between items-center p-4'>
 				<button>
 					<img src={minus} alt="" onClick={decreasor}/>
 				</button>
@@ -34,7 +34,7 @@ function Controller() {
 					<img src={plus} alt="" />
 				</button>
 			</div>
-			<button className='flex' onClick={addToCart}>
+			<button className='flex justify-center bg-red-50' onClick={addToCart}>
 				<CartImage />
 				<p>Add to Cart</p>
 			</button>
